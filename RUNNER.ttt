@@ -3,12 +3,10 @@ curl -O https://raw.githubusercontent.com/Ebrasdex/Ebrasdex/main/app.html
 ---------2-----------RUNNING
 python3 -m http.server 8080
 ---------3-----------(CHECK FOR KILLED)
-lsof -i :8080
+lsof -i :8080         |  WHEN RUN SHOWING STEP 4
 ---------4-----------HOW TO SEE FOR KILLED USE NUMBER OF PID
 COMMAND  PID        USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 python3 5403          -    3u  IPv4  51989      0t0  TCP *:http-alt (LISTEN)
----------5-----------PID TO KILLED
-lsof -i :8080         |  WHEN RUN SHOWING STEP 4
----------6-----------KILLED
+---------5-----------
 kill 5403
 -----------------------------------------------------------------------------------------------------------
